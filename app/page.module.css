@@ -1,0 +1,201 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 20%, #fff7ec, #ffdab3 40%, #f0c0a0 100%);
+  padding: 1rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 2px solid #e0a080;
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(180, 120, 80, 0.25);
+  animation: cardPop 0.7s ease-out;
+}
+
+@keyframes cardPop {
+  0% {
+    transform: scale(0.9) translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.cat {
+  font-size: 5rem;
+  animation: catIdle 2s ease-in-out infinite;
+  user-select: none;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes catIdle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #b03030;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.playBtn {
+  display: inline-block;
+  background: #e07050;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(224, 112, 80, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  user-select: none;
+}
+
+.playBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(224, 112, 80, 0.45);
+  background: #f08060;
+}
+
+.btnGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.secondaryBtn {
+  display: inline-block;
+  background: #7c4dff;
+  color: #fff;
+  font-size: 1.05rem;
+  padding: 0.65rem 1.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 5px 14px rgba(124, 77, 255, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  user-select: none;
+}
+.secondaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124, 77, 255, 0.5);
+  background: #9575ff;
+}
+
+.textBtn {
+  display: inline-block;
+  background: transparent;
+  color: #a06040;
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 2px solid #d0a080;
+  transition: transform 0.2s, background 0.2s, color 0.2s;
+  user-select: none;
+  cursor: pointer;
+}
+.textBtn:hover {
+  background: #fff3e8;
+  color: #c04020;
+}
+
+/* Tutorial Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  background: rgba(30, 15, 10, 0.45);
+  backdrop-filter: blur(4px);
+  animation: overlayIn 0.3s ease;
+}
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.modalCard {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #d08060;
+  border-radius: 24px;
+  padding: 2rem;
+  max-width: 480px;
+  width: 90%;
+  text-align: left;
+  box-shadow: 0 20px 50px rgba(160, 90, 60, 0.3);
+  animation: cardPop 0.4s ease-out;
+}
+.modalTitle {
+  font-size: 1.4rem;
+  color: #a03020;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+.modalText {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.modalText ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0;
+}
+.modalText li {
+  margin-bottom: 0.4rem;
+}
+.modalClose {
+  display: block;
+  margin: 0 auto;
+  background: #e07050;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.6rem 2rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 5px 14px rgba(224, 112, 80, 0.35);
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+.modalClose:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(224, 112, 80, 0.5);
+  background: #f08060;
+}
+
+.credits {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #a08070;
+}
